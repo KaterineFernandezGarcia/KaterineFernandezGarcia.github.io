@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Youtube, Github, Linkedin, Music } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
@@ -8,45 +9,66 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: "YouTube Channel",
+    title: "CapyQuokka YouTube Channel",
     description:
-      "Videos about topics I care about. Subscribe to follow along with my journey.",
-    href: "https://youtube.com/@placeholder",
+      "Founder and creator of CapyQuokka — digital media content with creative growth strategies and community engagement.",
+    href: "https://www.youtube.com/@CapyQuokka-kitsune",
     type: "YouTube" as const,
+    icon: <Youtube size={24} className="text-red-400" />,
   },
   {
-    title: "GitHub Repositories",
-    description: "Open source projects, code samples, and experiments.",
-    href: "https://github.com/placeholder",
-    type: "GitHub" as const,
-  },
-  {
-    title: "LinkedIn Profile",
-    description: "Professional experience, connections, and career updates.",
-    href: "https://linkedin.com/in/placeholder",
-    type: "LinkedIn" as const,
-  },
-  {
-    title: "Other Project",
+    title: "GitHub",
     description:
-      "Description of another project or endeavor. Replace with your actual project details.",
+      "Code projects, experiments, and technical exploration in Python, JavaScript, and more.",
+    href: "https://github.com/KatyLycoris",
+    type: "GitHub" as const,
+    icon: <Github size={24} className="text-slate-300" />,
+  },
+  {
+    title: "LinkedIn",
+    description:
+      "Professional profile, career updates, and networking. Let's connect!",
+    href: "https://www.linkedin.com/in/katerine-fernandez-garcia-36892a212",
+    type: "LinkedIn" as const,
+    icon: <Linkedin size={24} className="text-blue-400" />,
+  },
+  {
+    title: "Latin Dance Events — Austin, TX",
+    description:
+      "Coordinating and instructing Latin dance events in the Austin community and at UT Austin.",
     href: "#",
     type: "Other" as const,
+    icon: <Music size={24} className="text-emerald-400" />,
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold text-slate-900 mb-4">Projects</h1>
-      <p className="text-slate-600 mb-10 max-w-2xl">
-        A collection of my work, channels, and projects across the web.
-      </p>
-      <div className="grid gap-6 sm:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
-      </div>
-    </section>
+    <>
+      {/* Header section */}
+      <section className="bg-surface-dark py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-accent font-medium text-sm tracking-wider uppercase mb-3">
+            Portfolio
+          </p>
+          <h1 className="text-4xl font-bold text-white mb-4">Projects</h1>
+          <p className="text-slate-400 max-w-2xl">
+            A collection of my professional work, creative channels, and
+            community projects.
+          </p>
+        </div>
+      </section>
+
+      {/* Cards grid */}
+      <section className="bg-surface-darker py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
