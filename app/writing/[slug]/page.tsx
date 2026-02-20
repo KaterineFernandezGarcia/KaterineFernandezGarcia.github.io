@@ -8,6 +8,8 @@ type Params = {
   params: Promise<{ slug: string }>;
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const writings = getAllWritings();
   return writings.map((w) => ({ slug: w.slug }));
@@ -41,13 +43,13 @@ export default async function WritingPiecePage(props: Params) {
   return (
     <article className="max-w-3xl mx-auto px-6 py-16">
       <header className="mb-10">
-        <span className="text-sm font-medium uppercase tracking-wider text-accent">
+        <span className="text-sm font-medium uppercase tracking-wider text-indigo-400">
           {piece.category}
         </span>
-        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
           {piece.title}
         </h1>
-        <time className="text-slate-500">
+        <time className="text-slate-400">
           {new Date(piece.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -59,7 +61,7 @@ export default async function WritingPiecePage(props: Params) {
             {piece.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs"
+                className="px-2 py-1 bg-slate-800 text-slate-300 rounded text-xs"
               >
                 {tag}
               </span>

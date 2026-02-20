@@ -6,6 +6,7 @@ import { WritingPiece, WritingCategory } from "@/interfaces/writing";
 const writingDirectory = join(process.cwd(), "content", "writing");
 
 export function getWritingSlugs(): string[] {
+  if (!fs.existsSync(writingDirectory)) return [];
   return fs.readdirSync(writingDirectory).filter((f) => f.endsWith(".md"));
 }
 

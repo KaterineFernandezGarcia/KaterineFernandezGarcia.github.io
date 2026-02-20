@@ -1,4 +1,4 @@
-export type WritingCategory = "article" | "research" | "letter";
+export type WritingCategory = "article" | "research" | "letter" | "recommendation";
 
 export interface WritingPiece {
   slug: string;
