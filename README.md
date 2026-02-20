@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Katerine Fernandez Garcia — Personal Website
 
-## Getting Started
+**Live site:** [katerinefernandezgarcia.github.io](https://katerinefernandezgarcia.github.io)
 
-First, run the development server:
+Personal portfolio website built with Next.js, Tailwind CSS, and deployed to GitHub Pages.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Pages
+
+- **Home** — Introduction, highlights, and stats
+- **About** — Bio and background
+- **Projects** — YouTube, GitHub, LinkedIn, dance, podcast
+- **Writing** — Articles, research, and letters (Markdown-based)
+- **Resume** — Full work experience, skills, and PDF download
+- **Contact** — Booking for projects, dance lessons, events, and collaborations
+
+## How to Edit
+
+1. Edit files on [GitHub](https://github.com/KaterineFernandezGarcia/KaterineFernandezGarcia.github.io) (click pencil icon) or locally in VS Code
+2. Commit changes
+3. Site auto-deploys in 1-2 minutes
+
+## Add a New Article
+
+Create a `.md` file in `content/writing/` with this format:
+
+```markdown
+---
+title: "Article Title"
+date: "2026-02-20"
+category: "article"
+summary: "Short description."
+tags: ["tag1"]
+---
+
+Your content here.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) to preview.
