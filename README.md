@@ -37,9 +37,4 @@ Your content here.
 
 ## Local Development
 
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to preview.
+Run `npm install` then `npm run dev` to preview locally before pushing.
