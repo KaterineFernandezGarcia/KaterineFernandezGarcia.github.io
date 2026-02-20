@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Youtube, Github, Linkedin, Music } from "lucide-react";
+import { Youtube, Github, Linkedin, Music, Mic, Rocket } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
@@ -33,13 +33,29 @@ const projects = [
     icon: <Linkedin size={24} className="text-blue-400" />,
   },
   {
-    title: "Latin Dance Events — Austin, TX",
+    title: "Latin Dance — Lessons, Events & Performances",
     description:
-      "Coordinating and instructing Latin dance events in the Austin community and at UT Austin.",
-    href: "#",
+      "Coordinating Latin dance events, teaching lessons, and performing in the Austin community and at UT Austin.",
+    href: "/contact/",
     type: "Other" as const,
     icon: <Music size={24} className="text-emerald-400" />,
   },
+  {
+    title: "Podcast — Coming Soon",
+    description:
+      "Stay tuned for upcoming podcast appearances and episodes covering operations, creativity, and more.",
+    href: "#",
+    type: "Other" as const,
+    icon: <Mic size={24} className="text-amber-400" />,
+  },
+  // To add a new project, copy this template and fill in your details:
+  // {
+  //   title: "Your Project Name",
+  //   description: "What it's about.",
+  //   href: "https://link-to-project.com",
+  //   type: "Other" as const,  // or "YouTube", "GitHub", "LinkedIn"
+  //   icon: <Rocket size={24} className="text-purple-400" />,
+  // },
 ];
 
 export default function ProjectsPage() {

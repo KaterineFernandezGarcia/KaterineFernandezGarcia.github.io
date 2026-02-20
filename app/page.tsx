@@ -176,23 +176,22 @@ export default function HomePage() {
             Interested in working together?
           </h2>
           <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-            Check out my resume or connect with me on LinkedIn.
+            Whether it&apos;s a project, dance booking, podcast, or collaboration —
+            let&apos;s connect.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/resume/"
+              href="/contact/"
               className="px-7 py-3.5 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors font-medium"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/resume/"
+              className="px-7 py-3.5 border border-white/20 text-white rounded-lg hover:bg-white/5 transition-colors font-medium"
             >
               View Resume
             </Link>
-            <a
-              href="https://www.linkedin.com/in/katerine-fernandez-garcia-36892a212"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-7 py-3.5 border border-white/20 text-white rounded-lg hover:bg-white/5 transition-colors font-medium"
-            >
-              Connect on LinkedIn
-            </a>
           </div>
         </div>
       </section>
